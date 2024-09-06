@@ -43,3 +43,19 @@ return {topPerformer, bottomPerformer};
     }
 let employees = [{name: "JIm", sales:4500}, {name: "Billy", sales: 8400}, {name: "Samantha",sales: 6700}];
 console.log(findTopAndBottomPerformers(employees));
+
+function generatePerformanceReport(z){
+    let a = calculateAverageSales(z);
+    let b = determinePerformanceRating(z);
+    let c = findTopAndBottomPerformers(z);
+    //?????
+    
+     
+    
+}
+const salesData = [
+    { name: 'Alice', sales: [12000, 15000, 13000] },
+ { name: 'Bob', sales: [7000, 6000, 7500] },
+  { name: 'Charlie', sales: [3000, 4000, 3500] }, 
+ { name: 'Diana', sales: [9000, 8500, 9200] },];
+ console.log(generatePerformanceReport(salesData));
