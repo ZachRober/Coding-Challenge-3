@@ -32,7 +32,14 @@ console.log(rating);
     
     
 function findTopAndBottomPerformers(x){
-    
+let newarr = x.map(data => data.sales);//make sales and names into seperate arrays
+let newarr2 = x.map(data => data.name);
+let min = Math.min(...newarr);//find min and max values of number array
+let max = Math.max(...newarr);
+let bottomPerformer = x[newarr.indexOf(min)];//find the corresponding value to min and max
+let topPerformer = x[newarr.indexOf(max)];
+return {topPerformer, bottomPerformer};
+
     }
 let employees = [{name: "JIm", sales:4500}, {name: "Billy", sales: 8400}, {name: "Samantha",sales: 6700}];
 console.log(findTopAndBottomPerformers(employees));
