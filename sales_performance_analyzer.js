@@ -2,7 +2,7 @@ const salesFigures = [5500,3000,2200,2600,6700];
 let length = salesFigures.length;
 function calculateAverageSales (arr)
 {
-total = salesFigures.reduce((x,y) => x+y,0);
+total = arr.reduce((x,y) => x+y,0);
 let Average = total/length;
 return Average;
 }
@@ -45,13 +45,18 @@ let employees = [{name: "JIm", sales:4500}, {name: "Billy", sales: 8400}, {name:
 console.log(findTopAndBottomPerformers(employees));
 
 function generatePerformanceReport(z){
-    let a = calculateAverageSales(z);
-    let b = determinePerformanceRating(z);
-    let c = findTopAndBottomPerformers(z);
-    //?????
+    av = ``
+for (let i = 0; i < z.length; i++){
+    let groupAverage = calculateAverageSales(z[i].sales);
+    av += `${groupAverage} `
+}
+tpbt = ``
+
+for (let i = 0; i <z.length; i++){
     
-     
-    
+    sum = z.reduce((x[i], y[i]) => x[i].sales + y[i].sales, 0);
+
+}
 }
 const salesData = [
     { name: 'Alice', sales: [12000, 15000, 13000] },
